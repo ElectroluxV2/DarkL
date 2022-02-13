@@ -1,44 +1,78 @@
 /* ==UserStyle==
 @name           DarkL
-@namespace      https://github.com/ZykeDev
-@version        0.1.4
+@namespace      https://github.com/ElectroluxV2
+@version        0.2.1
 @description    A Dark theme for DeepL
-@author         Noya
-@updateURL      https://github.com/ZykeDev/DarkL/raw/main/darkl.user.css
-@homepageURL  	https://github.com/ZykeDev/DarkL
-@supportURL  	https://github.com/ZykeDev/DarkL/issues
-
+@author         Noya, ElectroluxV2
+@updateURL      https://github.com/ElectroluxV2/DarkL/raw/main/darkl.user.css
+@homepageURL  	https://github.com/ElectroluxV2/DarkL
+@supportURL  	https://github.com/ElectroluxV2/DarkL/issues
 ==/UserStyle== */
 
 @-moz-document domain("deepl.com") {
     
    :root {
-    color-scheme: dark;
-    --color-white: #111213;
-    --color-white-transparent: rgba(17, 18, 19, .6);
-    --color-black: #fff;
-    --color-transparent: rgba(17, 18, 19, 0);
-    --color-background-light: var(--color-gray-800);
-    --color-background-default: var(--color-gray-700);
-    --color-background-dark: var(--color-gray-600);
-    --color-border-light: var(--color-gray-800);
-    --color-border-default: var(--color-gray-700);
-    --color-border-dark: var(--color-gray-600);
-    --color-text-very-light: var(--color-gray-400);
-    --color-text-light: var(--color-gray-300);
-    --color-text-default: var(--color-gray-200);
-    --color-text-dark: var(--color-gray-100);
-    --color-overlay: var(--color-gray-700);
-    --color-overlay-default: var(--color-gray-700);
-    --color-overlay-dark: var(--color-gray-800);
-    --color-overlay-transparent: rgba(0, 0, 0, .6);
-    --lt-shadow-default: 0 0 0 1px var(--color-gray-700);
-    --lt-shadow-active: 0 0 0 1px var(--color-gray-600);
-    --lt-shadow-modal: 0 0 0 1px var(--color-gray-600);
-  }
-    
-  .dl_body--redesign {
-    background: var(--color-white);
-    color: var(--color-text-default);
-  }
+  --color-gray-200: #f1f3f9;
+  color-scheme: dark;
+  --color-white: #111213;
+  --color-text-default: var(--color-gray-200);
+}
+
+body {
+  filter: invert(1) hue-rotate(190deg);
+}
+
+.dl_body--redesign.dl_top_element--wide {
+  background-color: #FFF !important;
+  color: #000 !important;
+}
+
+.dl_body--redesign {
+  background-color: var(--color-white) !important;
+  color: var(--color-text-default) !important;
+}
+
+#lmt_pro_ad_container,
+#dl_quotes_container,
+#iosAppAdPortal,
+#dl_career_container,
+footer {
+  display: none !important;
+}
+
+nav:not(:hover) {
+  filter: grayscale(80%) opacity(30%);
+}
+
+#new-menu-container > * {
+  background-color: #FFF !important;
+}
+
+.lmt__edit_text_popup__waiting_indicator,
+.docTrans_document__source_block {
+  color: #000 !important;
+}
+
+#lmt__dict,
+#lmt__dict > *,
+section,
+section > *,
+button,
+.docTrans_document__source_block,
+.docTrans_document__target_block,
+.lmt__language_container_switch {
+  box-shadow: 0 1px 4px 0 rgb(255 255 255 / 50%) !important;
+}
+
+.lmt__stickyMenubar .dl_header--sticky {
+  position: static !important;
+}
+
+.lmt__textarea_container {
+  background-color: transparent !important;
+}
+
+textarea {
+  color: #1d1e20 !important;
+}
 }
